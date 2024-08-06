@@ -1,0 +1,6 @@
+
+CREATE table imageList(id integer primary key, filename text UNIQUE);
+CREATE table imageColour(imageId integer NOT NULL, genTime TEXT, c1 integer, c2 integer, c3 integer);
+CREATE table colourMap(id integer primary key, name TEXT UNIQUE);
+CREATE table classifierMeta(imageId integer NOT NULL, colourResultId integer NOT NULL, inertia REAL, n_clusters integer CHECK(n_clusters > 0));
+
